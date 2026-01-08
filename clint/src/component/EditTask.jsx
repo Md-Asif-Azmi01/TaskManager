@@ -20,7 +20,7 @@ const EditTask = () => {
 
   useEffect(() => {
     const fetchTaskDetail = async () => {
-      const res = await axios.get("https://taskmanagerbackend-evoe.onrender.com/api/v1/gettask/"+id);
+      const res = await axios.get("https://taskmanagerbackend-evoe.onrender.com/"+id);
       console.log(res.data);
       setValue(res.data.taskDetails);
     };
