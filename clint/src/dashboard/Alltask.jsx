@@ -12,7 +12,7 @@ const Alltask = () => {
     useEffect(() => {
         const fetchdata = async() => {
             try {
-                const res = await axios.get('https://taskmanagerbackend-evoe.onrender.com/api/v1/getalltasks');
+                const res = await axios.get('https://taskmanagerbackend-evoe.onrender.com');
                 // console.log(res.data.completed) 
                 settasksyet(res.data.yetToStart);
                 settasksin(res.data.inprogress);
