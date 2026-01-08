@@ -31,7 +31,7 @@ const EditTask = () => {
     e.preventDefault();
     console.log("Sending data:", Value);
     try {
-      const res = await axios.put("http://localhost:3000/api/v1/edittask/"+id, Value);
+      const res = await axios.put("https://taskmanagerbackend-evoe.onrender.com/api/v1/edittask/"+id, Value);
       console.log("Response:", res.data);
       alert("Task Updated successfully!");
       Navigate("/");
@@ -45,7 +45,7 @@ const EditTask = () => {
     e.preventDefault();
     console.log("Deleting task with id:", Value._id);
     try {
-      const res = await axios.delete("http://localhost:3000/api/v1/deletetask/"+Value._id);
+      const res = await axios.delete("https://taskmanagerbackend-evoe.onrender.com/api/v1/deletetask/"+Value._id);
       console.log("Response:", res.data);
       alert("Task Deleted successfully!");
       Navigate("/");
