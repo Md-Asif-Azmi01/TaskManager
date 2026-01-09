@@ -20,7 +20,7 @@ const AddTask = () => {
     e.preventDefault();
     console.log("Sending data:", Value);
     try {
-      const res = await axios.post("https://taskmanagerbackend-evoe.onrender.com", Value);
+      const res = await axios.post("https://taskmanagerbackend-evoe.onrender.com/addtask", Value);
       console.log("Response:", res.data);
       alert("Task added successfully!");
       Navigate("/");
